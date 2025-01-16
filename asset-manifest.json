@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/weather-react/static/css/main.5a6ffe72.css",
+    "main.js": "/weather-react/static/js/main.2f41cd90.js",
+    "static/media/bg-hero-desktop.jpg": "/weather-react/static/media/bg-hero-desktop.95311d36a0fd1a2e2d11.jpg",
+    "index.html": "/weather-react/index.html",
+    "main.5a6ffe72.css.map": "/weather-react/static/css/main.5a6ffe72.css.map",
+    "main.2f41cd90.js.map": "/weather-react/static/js/main.2f41cd90.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a6ffe72.css",
+    "static/js/main.2f41cd90.js"
+  ]
+}
