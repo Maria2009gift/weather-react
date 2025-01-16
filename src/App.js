@@ -10,12 +10,18 @@ import News from './components/News/News';
 import GallerySlider from './components/GallerySlider/GallerySlider';
 import Footer from './components/Footer/Footer';
 
+import { useState } from 'react';
+
 function App() {
+
+  const [searchedLocation, setSearchedLocation] = useState("")
+
+
   return (
     <>
       <Header/>
-      <Hero/>
-      <CityList/>
+      <Hero getSearch={setSearchedLocation}/>
+      <CityList search={searchedLocation}/>
       <DetailedInfo/>
       <ForecastChart/>
       <ForecastSchedule/>
@@ -23,7 +29,7 @@ function App() {
       <GallerySlider/>
       <Footer/>
     </>
-  );
+  )
 }
 
 export default App;

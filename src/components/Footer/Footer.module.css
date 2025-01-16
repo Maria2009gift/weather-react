@@ -1,0 +1,18 @@
+.footer {
+    display: flex;
+    gap: 103px;
+
+    background-color: #FFB36C;
+
+    height: 180px;
+    padding: 40px 150px 0;
+}
+
+.list_adress {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+

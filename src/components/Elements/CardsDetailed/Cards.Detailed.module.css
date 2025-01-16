@@ -1,0 +1,37 @@
+
+h3, p {
+    margin: 0;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    column-gap: 40px;
+
+    padding: 20px 0;
+    margin: 0 auto;
+    margin-bottom: 31px;
+    /* width: calc((100% - 6* 29px) /3); */
+    width: 290px;
+    height: 217px;
+    
+    border-radius: 10px;
+   
+    background-color: #D9D9D9;
+}
+
+.subtitle {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 16px;
+
+}
+
+.value {
+    margin-bottom: 23px;
+    text-align: center;
+
+}
+
+
+

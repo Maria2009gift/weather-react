@@ -1,10 +1,12 @@
+import style from './Footer.module.css'
+
 function Footer() {
   return (
-    <footer>
-      <p className="logo"></p>
+    <footer className={style.footer}>
+      <p className="logo">24forecast</p>
       <div className="container_adress">
         <h3 className="title_adress">Address</h3>
-        <ul className="list_adress">
+        <ul className={style.list_adress}>
           <li className="item_adress">
             <p className="p_adress">Svobody str. 35</p>
           </li>

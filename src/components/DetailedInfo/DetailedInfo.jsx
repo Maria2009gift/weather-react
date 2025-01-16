@@ -1,43 +1,21 @@
+import style from './DetailedInfo.module.css'
+
+import CardsDetailed from '../Elements/CardsDetailed/CardsDetailed';
+import Container from '../Elements/Container/Container';
 
 function DetailedInfo() {
     return (
-      <div>
-        <ul className="list_detailedinfo">
-            <li className="item">
-                <h3 className="title_qualities">Feels like</h3>
-                <p className="value">29.2℃</p>
-                <p className="img"></p>
-            </li>
-            <li className="item">
-                <h3 className="title_qualities">Min ℃</h3>
-                <p className="value">27.9℃</p>
-                <h3 className="title_qualities">Max ℃</h3>
-                <p className="value">27.9℃</p>
-                <p className="img"></p>
-            </li>
-            <li className="item">
-                <h3 className="title_qualities">Humidity</h3>
-                <p className="value">59%</p>
-                <p className="img"></p>
-            </li>
-            <li className="item">
-                <h3 className="title_qualities">Pressure</h3>
-                <p className="value">1007 Pa</p>
-                <p className="img"></p>
-            </li>
-            <li className="item">
-                <h3 className="title_qualities">Wind speed</h3>
-                <p className="value">3.17 m/s</p>
-                <p className="img"></p>
-            </li>
-            <li className="item">
-                <h3 className="title_qualities">Visibility</h3>
-                <p className="value">Unlimited</p>
-                <p className="img"></p>
-            </li>
+      <Container>
+        <ul className={style.list_detailedinfo}>
+        <CardsDetailed subTitle={"Feels like"} value={"29.2℃"} />
+        <CardsDetailed subTitle={"Min ℃"} value={"27.9℃"} secondSubTitle={"Max ℃"} secondValue={"27.9℃"} />
+        <CardsDetailed subTitle={"Humidity"} value={"59%"} />
+        <CardsDetailed subTitle={"Pressure"} value={"1007 Pa"} />
+        <CardsDetailed subTitle={"Wind speed"} value={"3.17 m/s"} />
+        <CardsDetailed subTitle={"Visibility"} value={"Unlimited"} />
         </ul>
   
-      </div>
+      </Container>
     );
   }
   

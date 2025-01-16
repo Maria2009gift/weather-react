@@ -1,15 +1,45 @@
+import style from './Hero.module.css'
 
-function Hero() {
+import { useState } from "react";
+
+function Hero({ getSearch }) {
+  const [search, setSearch] = useState("");
+
+  const handleChange = (event) => {
+    const searchResult = event.currentTarget.value;
+    setSearch(searchResult);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    getSearch(search);
+    setSearch("");
+  };
+
   return (
-    <div className='hero'>
-      <h1 className="title">Weather dashboard</h1>
-      <div className="container_subinfo">
-        <p className="text">Create your personal list of  
-        favorite cities and always be aware of the weather.</p>
-        <hr className="line"/>
-        <p className="date">October 2023 Friday, 13th</p>
+    <div className={style.hero}>
+      <h1 className={style.title}>Weather dashboard</h1>
+      <div className={style.container_subinfo}>
+        <p className={style.text}>
+          Create your personal list of favorite cities and always be aware of
+          the weather.
+        </p>
+        <hr className={style.line} />
+        <p className={style.date}>October 2023 Friday, 13th</p>
       </div>
-      <input type="text" />
+      <form onSubmit={handleSubmit} className={style.form}>
+        <label>
+          <input
+            type="text"
+            placeholder="Search location..."
+            value={search}
+            name="location"
+            onChange={handleChange}
+            className={style.input_location}
+          />
+        </label>
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
 }
