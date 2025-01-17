@@ -16,7 +16,6 @@ function CityList({search}) {
 
   return (
     <ul>
-      <li><p>{search}</p></li>
       {/* list.map((city) => <CityItem data={city}/>) */}
     </ul>
   );

@@ -1,3 +1,40 @@
 .title_news {
     font-weight: 20px;
 }
+
+.list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+    padding: 0;
+}
+
+.list > li {
+    width: 270px;
+}
+
+.img_news {
+    border-radius: 10px;
+    width: 270px;
+}
+
+.article_title {
+    text-wrap: wrap;
+}
+
+.button_seemore {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #FFB36C;
+}
+
+
+
+
+
+
+
+
+
