@@ -1,9 +1,9 @@
 
-function CityItem() {
+function CityItem({data}) {
     return (
       <li>
         <div className="container_location">
-            <p className="location">Prague</p>
+            <p className="location">{data.location.country}</p>
             <p className="location">Czech Republic</p>
         </div>
         <p className="time">14:00</p>
