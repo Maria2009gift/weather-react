@@ -22,7 +22,7 @@ function App() {
       <Header/>
       <Hero getSearch={setSearchedLocation}/>
       <CityList search={searchedLocation}/>
-      <DetailedInfo/>
+      <DetailedInfo search={searchedLocation}/>
       <ForecastChart/>
       <ForecastSchedule/>
       <News/>
