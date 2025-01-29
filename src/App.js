@@ -9,17 +9,20 @@ import ForecastSchedule from './components/ForecastSchedule/ForecastSchedule';
 import News from './components/News/News';
 import GallerySlider from './components/GallerySlider/GallerySlider';
 import Footer from './components/Footer/Footer';
+import Modal from './components/Elements/Modal/Modal';
 
 import { useState } from 'react';
 
 function App() {
 
   const [searchedLocation, setSearchedLocation] = useState("")
+  const [modalVisability, setModalVisability] = useState(false)
 
 
   return (
     <>
-      <Header/>
+      <Header openModal={setModalVisability}/>
+      {modalVisability && <Modal closeModal={setModalVisability}/>}
       <Hero getSearch={setSearchedLocation}/>
       <CityList search={searchedLocation}/>
       <DetailedInfo search={searchedLocation}/>

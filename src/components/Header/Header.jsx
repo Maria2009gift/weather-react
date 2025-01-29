@@ -3,8 +3,14 @@ import style from "./Header.module.css"
 
 import Container from "../Elements/Container/Container"
 
-function Header() {
+function Header({openModal}) {
 
+    // const startREgistration = () = {
+
+    // }
+    function startRegistration()  {
+        openModal(true)
+    }
 
     return(
         <Container>
@@ -22,7 +28,7 @@ function Header() {
                     </li>
                 </ul>
                 <div className={style.container_user}>
-                    <button type="button" className={style.button_signup}>Sign Up</button>
+                    <button type="button" className={style.button_signup} onClick={startRegistration}>Sign Up</button>
                     <p className="user_avatar">Avatar</p>
                 </div>
             </header>

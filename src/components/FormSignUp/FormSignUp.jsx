@@ -1,5 +1,6 @@
 
 import style from './FormSignUp.module.css'
+import Modal from '../Elements/Modal/Modal'
 
 function FormSignUp() {
 
@@ -19,7 +20,7 @@ function FormSignUp() {
                     <p className={style.minititle_signup}>Password</p>
                     <input type="text" className={style.input_signup} placeholder='Password'/>
                 </label>
-                <button type="submit">Sign Up</button>
+                <button type="submit" className={style.signup}>Sign Up</button>
             </form>
         </>
     )

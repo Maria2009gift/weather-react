@@ -1,0 +1,36 @@
+
+.title_signup {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.minititle_signup {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.input_signup {
+    width: 100%;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #E4E4E4;
+    padding: 18px 0 18px 20px;
+}
+
+.signup {
+    font-size: 14px;
+    background-color: #FFB36C;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
