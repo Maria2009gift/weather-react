@@ -3,7 +3,7 @@ import style from "./Header.module.css"
 
 import Container from "../Elements/Container/Container"
 
-function Header({openModal}) {
+function Header({openModal, nameUser}) {
 
     // const startREgistration = () = {
 
@@ -29,7 +29,7 @@ function Header({openModal}) {
                 </ul>
                 <div className={style.container_user}>
                     <button type="button" className={style.button_signup} onClick={startRegistration}>Sign Up</button>
-                    <p className="user_avatar">Avatar</p>
+                    <p className="user_avatar">{nameUser}</p>
                 </div>
             </header>
         </Container>

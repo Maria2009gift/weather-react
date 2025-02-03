@@ -16,16 +16,19 @@ import { useState } from 'react';
 function App() {
 
   const [searchedLocation, setSearchedLocation] = useState("")
+  const [searchedLocationData, setSearchedLocationData] = useState({})
   const [modalVisability, setModalVisability] = useState(false)
-
+  const [userName, setUserName] = useState("Avatar")
+  
 
   return (
     <>
-      <Header openModal={setModalVisability}/>
-      {modalVisability && <Modal closeModal={setModalVisability}/>}
+      <Header openModal={setModalVisability} nameUser={userName}/>
+      {modalVisability && <Modal closeModal={setModalVisability} getName={setUserName}/>}
       <Hero getSearch={setSearchedLocation}/>
-      <CityList search={searchedLocation}/>
-      <DetailedInfo search={searchedLocation}/>
+      {/* {console.log(searchedLocation)  } */}
+      <CityList search={searchedLocation} getLoactionData={setSearchedLocationData}/>
+      {searchedLocation && <DetailedInfo locate={searchedLocationData}/>}
       <ForecastChart/>
       <ForecastSchedule/>
       <News/>

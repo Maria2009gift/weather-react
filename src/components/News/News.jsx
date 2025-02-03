@@ -21,7 +21,6 @@ function News() {
   const seeMore = () => {
     const newPage = page + 1
     setPage(newPage)
-    console.log(newPage);
     
   };
   return (

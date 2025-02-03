@@ -3,17 +3,23 @@ import style from './Hero.module.css'
 import { useState } from "react";
 
 function Hero({ getSearch }) {
-  const [search, setSearch] = useState("");
+  // const [search, setSearch] = useState("");
 
-  const handleChange = (event) => {
-    const searchResult = event.currentTarget.value;
-    setSearch(searchResult);
-  };
+  // const handleChange = (event) => {
+  //   const searchResult = event.currentTarget.value;
+  //   setSearch(searchResult);
+  //   console.log(search);
+    
+  // };
 
   const handleSubmit = (event) => {
+    // console.log(search);
+    const searchResult = event.currentTarget.elements.location.value;
+    // console.log(searchResult);
+    
     event.preventDefault();
-    getSearch(search);
-    setSearch("");
+    getSearch(searchResult);
+    // setSearch("");
   };
 
   return (
@@ -32,9 +38,9 @@ function Hero({ getSearch }) {
           <input
             type="text"
             placeholder="Search location..."
-            value={search}
+            // value={search}
             name="location"
-            onChange={handleChange}
+            // onChange={handleChange}
             className={style.input_location}
           />
         </label>
