@@ -14,3 +14,4 @@ function ForecastSchedule() {
   }
   
   export default ForecastSchedule;
+//   http://api.weatherapi.com/v1/forecast.json?days=7&q=paris&key=b5c7c9b360384cbb886211934251801

@@ -4,9 +4,12 @@
   "private": true,
   "homepage": "https://maria2009gift.github.io/weather-react/",
   "dependencies": {
+    "chart.js": "^4.4.7",
     "cra-template": "1.2.0",
+    "faker": "^6.6.6",
     "gh-pages": "^6.3.0",
     "react": "^19.0.0",
+    "react-chartjs-2": "^5.3.0",
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",
     "swiper": "^11.2.1"

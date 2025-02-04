@@ -3,8 +3,6 @@ import style from "./DetailedInfo.module.css";
 import CardsDetailed from "../CardsDetailed/CardsDetailed";
 import Container from "../Elements/Container/Container";
 
-import { useState, useEffect, useRef } from "react";
-
 function DetailedInfo({ locate }) {
   console.log(locate);
   let a = false
