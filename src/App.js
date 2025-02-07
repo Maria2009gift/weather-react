@@ -29,7 +29,7 @@ function App() {
       {/* {console.log(searchedLocation)  } */}
       <CityList search={searchedLocation} getLoactionData={setSearchedLocationData}/>
       {searchedLocation && <DetailedInfo locate={searchedLocationData}/>}
-      <ForecastChart/>
+      <ForecastChart search={searchedLocation}/>
       <ForecastSchedule/>
       <News/>
       <GallerySlider/>

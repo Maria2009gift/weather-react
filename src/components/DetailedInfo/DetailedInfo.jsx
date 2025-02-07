@@ -4,7 +4,6 @@ import CardsDetailed from "../CardsDetailed/CardsDetailed";
 import Container from "../Elements/Container/Container";
 
 function DetailedInfo({ locate }) {
-  console.log(locate);
   let a = false
   if (Object.keys(locate).length === 0) { 
     a = false
