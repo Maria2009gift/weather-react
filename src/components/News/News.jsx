@@ -6,12 +6,12 @@ import { useState, useEffect } from "react";
 
 function News() {
   const [news, setNews] = useState({});
-  const [page, setPage] = useState(1)
-  // let link =
-  //   `https://newsapi.org/v2/top-headlines?sources=bbc-news&page=${page}&pageSize=4&apiKey=6a9fd6b683804170a11324b108dc5eb7`;
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
-    fetch(`https://newsapi.org/v2/top-headlines?sources=bbc-news&page=${page}&pageSize=4&apiKey=6a9fd6b683804170a11324b108dc5eb7`)
+    fetch(
+      `https://newsapi.org/v2/top-headlines?sources=bbc-news&page=${page}&pageSize=4&apiKey=6a9fd6b683804170a11324b108dc5eb7`
+    )
       .then((res) => res.json())
       .then((newsA) => {
         setNews({ articles: newsA.articles });
@@ -19,9 +19,8 @@ function News() {
   }, [page]);
 
   const seeMore = () => {
-    const newPage = page + 1
-    setPage(newPage)
-    
+    const newPage = page + 1;
+    setPage(newPage);
   };
   return (
     <Container>
@@ -35,7 +34,9 @@ function News() {
             </li>
           ))}
       </ul>
-      <button className={style.button_seemore} onClick={seeMore}>See more</button>
+      <button className={style.button_seemore} onClick={seeMore}>
+        See more
+      </button>
     </Container>
   );
 }

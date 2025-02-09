@@ -28,8 +28,6 @@ ChartJS.register(
 
 function Forecast({ search }) {
   const [locations, setLocations] = useState([]);
-  // const [searchValue, setSearchValue] = useState(search)
-  // console.log(search);
 
   useEffect(() => {
     if (search) {
@@ -38,31 +36,16 @@ function Forecast({ search }) {
       )
         .then((res) => res.json())
         .then((locate) => {
-          console.log(locate.forecast.forecastday[0].hour);
           const forecast = [locate.forecast.forecastday[0].hour];
           const hours = [];
           forecast[0].map((hour) => {
             hours.push(hour.heatindex_c);
-            // console.log(hours)
             setLocations(hours);
             return hours;
           });
-          // setLocations(forecast)
-          // console.log(locations);heatindex_c
         });
     }
-    // if (locations.length) {
-    //   locations.map(locate => {
-    //     console.log(locate)
-    //     return locate
-
-    //   })
-    // }
   }, [search]);
-
-  // useEffect(()=> {
-
-  // }, [locations])
 
   const options = {
     scales: {

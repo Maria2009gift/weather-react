@@ -30,7 +30,7 @@ function App() {
       <CityList search={searchedLocation} getLoactionData={setSearchedLocationData}/>
       {searchedLocation && <DetailedInfo locate={searchedLocationData}/>}
       <ForecastChart search={searchedLocation}/>
-      <ForecastSchedule/>
+      <ForecastSchedule search={searchedLocation}/>
       <News/>
       <GallerySlider/>
       <Footer/>
