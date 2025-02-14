@@ -86,18 +86,17 @@ function Forecast({ search }) {
     labels,
     datasets: [
       {
-        label: "Dataset 1",
+        label: "Hourly forecast",
         data: [...locations],
         backgroundColor: "rgb(255, 179, 108)",
+        
       },
     ],
   };
 
   return (
     <Container>
-      <div className={style.chart}>
-        {search && <Line options={options} data={data} />}
-      </div>
+      {search && <div className={style.chart}><Line options={options} data={data}/></div>}
     </Container>
   );
 }

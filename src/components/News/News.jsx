@@ -24,19 +24,21 @@ function News() {
   };
   return (
     <Container>
-      <h2 className={style.title_news}>Interacting with our pets</h2>
-      <ul className={style.list}>
-        {news.articles &&
-          news.articles.map((newsObj) => (
-            <li>
-              <img className={style.img_news} src={newsObj.urlToImage} alt="" />
-              <p className={style.article_title}>{newsObj.title}</p>
-            </li>
-          ))}
-      </ul>
-      <button className={style.button_seemore} onClick={seeMore}>
-        See more
-      </button>
+      <div className={style.container_news}>
+        <h2 className={style.title_news}>Interacting with our pets</h2>
+        <ul className={style.list}>
+          {news.articles &&
+            news.articles.map((newsObj) => (
+              <li>
+                <img className={style.img_news} src={newsObj.urlToImage} alt="" />
+                <p className={style.article_title}>{newsObj.title}</p>
+              </li>
+            ))}
+        </ul>
+        <button className={style.button_seemore} onClick={seeMore}>
+          See more
+        </button>
+      </div>
     </Container>
   );
 }

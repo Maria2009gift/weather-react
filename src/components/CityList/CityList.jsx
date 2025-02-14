@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 function CityList({ search, getLoactionData }) {
   const [locations, setLocations] = useState([]);
-  const [searchValue, setSearchValue] = useState(search)
+  // const [searchValue, setSearchValue] = useState(search)
 
   useEffect(() => {
     
@@ -37,7 +37,7 @@ function CityList({ search, getLoactionData }) {
 
   return (
     <Container>
-      <ul className={style.list_City}>{locations && locations.map((location) => <CityItem data={location}/>)}</ul>
+      <ul className={style.list_City}>{locations && locations.map((location) => <CityItem data={location} arrayOfLocations={locations} toUpdateLocations={setLocations}/>)}</ul>
     </Container>
   );
 }

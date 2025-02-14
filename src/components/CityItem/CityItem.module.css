@@ -59,6 +59,7 @@
 .img_weather {
     width: 120px;
     height: 120px;
+    margin: 0 100px;
 }
 
 .temperature {
@@ -69,6 +70,26 @@
 .list_instruments_card {
     display: flex;
     list-style: none;
-    gap: 30px;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.refresh, .favorite, .delete {
+    border: none;
+    background: none;
+    width: 30px;
+    height: 30px;
+}
+
+.refresh {
+    margin-right: 16px;
+}
+
+.seemore {
+    background-color:  #FFB36C;
+    border: none;
+    border-radius: 10px;
+    margin: 0 38px;
+    padding: 8px 25px;
 }
 

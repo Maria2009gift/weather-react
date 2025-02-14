@@ -28,9 +28,9 @@ function ForecastSchedule({ search }) {
             {a &&
               locations.forecast.forecastday.map((location) => (
                 <div className={style.day}>
-                  <p>Fri, Oct 13</p>
-                  <p>{`${location.day.maxtemp_c}/${location.day.mintemp_c}℃`}</p>
-                  <p>{location.day.condition.text}</p>
+                  <p className={style.date}>Fri, Oct 13</p>
+                  <p className={style.temp}>{`${location.day.maxtemp_c}/${location.day.mintemp_c}℃`}</p>
+                  <p className={style.condition}>{location.day.condition.text}</p>
                 </div>
               ))}
           </div>

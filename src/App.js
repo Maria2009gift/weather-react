@@ -26,13 +26,12 @@ function App() {
       <Header openModal={setModalVisability} nameUser={userName}/>
       {modalVisability && <Modal closeModal={setModalVisability} getName={setUserName}/>}
       <Hero getSearch={setSearchedLocation}/>
-      {/* {console.log(searchedLocation)  } */}
       <CityList search={searchedLocation} getLoactionData={setSearchedLocationData}/>
       {searchedLocation && <DetailedInfo locate={searchedLocationData}/>}
       <ForecastChart search={searchedLocation}/>
       <ForecastSchedule search={searchedLocation}/>
       <News/>
-      <GallerySlider/>
+      {/* <GallerySlider/> */}
       <Footer/>
     </>
   )

@@ -8,11 +8,27 @@
     padding: 40px 150px 0;
 }
 
+.logo {
+    width: 90px;
+    height: 62px;
+}
+
 .list_adress {
     list-style: none;
     padding: 0;
 }
 
+.list_contacts {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.icon_media {
+    width: 40px;
+    height: 40px;
+}
 
 
 

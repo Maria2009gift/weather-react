@@ -1,5 +1,7 @@
 import style from "./Hero.module.css";
 
+import search_img from '../../img/search.png'
+
 import { useState } from "react";
 
 function Hero({ getSearch }) {
@@ -32,7 +34,7 @@ function Hero({ getSearch }) {
             className={style.input_location}
           />
         </label>
-        <button type="submit">Submit</button>
+        <button type="submit" className={style.search_btn}><img src={search_img} alt="" className={style.search_img}/></button>
       </form>
     </div>
   );

@@ -1,5 +1,8 @@
 import style from "./Header.module.css";
 
+import logo from '../../img/logo.png'
+import user_img from '../../img/user.png'
+
 import Container from "../Elements/Container/Container";
 
 function Header({ openModal, nameUser }) {
@@ -10,7 +13,7 @@ function Header({ openModal, nameUser }) {
   return (
     <Container>
       <header className={style.header}>
-        <p className={style.logo}>24Forecast</p>
+        <img src={logo} alt="" className={style.logo}/>
         <ul className={style.list_info}>
           <li className="item_info">
             <a href="" className={style.info}>
@@ -36,7 +39,9 @@ function Header({ openModal, nameUser }) {
           >
             Sign Up
           </button>
-          <p className="user_avatar">{nameUser}</p>
+          
+          {nameUser ? <img src={user_img} alt="" className="user_avatar"/> : <p className="user_avatar">{nameUser}</p>}
+          
         </div>
       </header>
     </Container>

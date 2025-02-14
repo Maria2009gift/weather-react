@@ -1,6 +1,7 @@
 
 .list_City {
     display: flex;
+    justify-content: center;
     gap: 90px;
     list-style: none;
 

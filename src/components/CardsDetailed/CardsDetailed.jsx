@@ -5,7 +5,7 @@ function CardsDetailed({ subTitle, value, img}) {
     <li className={style.item}>
       <h3 className={style.subtitle}>{subTitle}</h3>
       <p className={style.value}>{value}</p>
-      <img className={style.icon} src="../../img/pressure.png" alt="" />
+      <img className={style.icon} src={img} alt="" />
     </li>
   );
 }

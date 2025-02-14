@@ -1,3 +1,5 @@
+import style from './GallerySlider.module.css'
+
 import Container from "../Elements/Container/Container";
 
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
@@ -25,22 +27,24 @@ function GallerySlider() {
 
   return (
     <Container>
-      <h2 className="title_halleryslider">Beautiful nature</h2>
-      <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={50}
-        slidesPerView={3}
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-      >
-        {images.images &&
-          images.images.map((img) => (
-            <SwiperSlide>
-              <img src={img.previewURL} alt="" width="200px" />
-            </SwiperSlide>
-          ))}
-      </Swiper>
+      <div className={style.container_gallery}>
+        <h2 className="title_halleryslider">Beautiful nature</h2>
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          slidesPerView={3}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+        >
+          {images.images &&
+            images.images.map((img) => (
+              <SwiperSlide>
+                <img src={img.previewURL} alt="" width="200px" />
+              </SwiperSlide>
+            ))}
+        </Swiper>
+      </div>
     </Container>
   );
 }
