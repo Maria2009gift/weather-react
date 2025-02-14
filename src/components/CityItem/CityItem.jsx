@@ -11,6 +11,21 @@ function CityItem({ data, arrayOfLocations, toUpdateLocations }) {
 
   const [favoriteLocations, setFavoriteLOcations] = useState([])
 
+  function toRefresh(event) {
+    const locationName = event.currentTarget.id
+
+    fetch(`http://api.weatherapi.com/v1/current.json?q=${locationName}&key=b5c7c9b360384cbb886211934251801`)
+    .then((res) => res.json())
+    .then((locate) => {
+      const indexOfLocation = arrayOfLocations.findIndex(location => location.location.name === locationName)
+      console.log(indexOfLocation);
+      arrayOfLocations[indexOfLocation] = locate 
+      toUpdateLocations(arrayOfLocations);
+      
+
+    })
+  }
+
   function addFavorite(event) {
     // const locationName = event.currentTarget.id
     // const favoriteLocation = arrayOfLocations.find(location => location.location.name === locationName)
@@ -82,10 +97,10 @@ function CityItem({ data, arrayOfLocations, toUpdateLocations }) {
       <p className={style.temperature}>{`${data.current.heatindex_c}°C`}</p>
       <ul className={style.list_instruments_card}>
         <li className={style.item}>
-          <button className={style.refresh}><img src={refresh} alt="" /></button>
+          <button className={style.refresh} onClick={toRefresh} id={data.location.name}><img src={refresh} alt="" /></button>
         </li>
         <li className={style.item}>
-          <button className={style.favorite} onClick={addFavorite}  id={data.location.name}><img src={heart} alt="" /></button>
+          <button className={style.favorite} onClick={addFavorite} id={data.location.name}><img src={heart} alt="" /></button>
         </li>
         <li className={style.item}>
           <button className={style.seemore}>See more</button>

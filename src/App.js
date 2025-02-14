@@ -31,7 +31,7 @@ function App() {
       <ForecastChart search={searchedLocation}/>
       <ForecastSchedule search={searchedLocation}/>
       <News/>
-      {/* <GallerySlider/> */}
+      <GallerySlider/>
       <Footer/>
     </>
   )
