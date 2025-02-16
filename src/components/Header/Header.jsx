@@ -15,18 +15,18 @@ function Header({ openModal, nameUser }) {
       <header className={style.header}>
         <img src={logo} alt="" className={style.logo}/>
         <ul className={style.list_info}>
-          <li className="item_info">
-            <a href="" className={style.info}>
+          <li className={style.item_info}>
+            <a href="g" className={style.info}>
               Who we are
             </a>
           </li>
-          <li className="item_info">
-            <a href="" className={style.info}>
+          <li className={style.item_info}>
+            <a href="g" className={style.info}>
               Contacts
             </a>
           </li>
-          <li className="item_info">
-            <a href="" className={style.info}>
+          <li className={style.menu}>
+            <a href="g" className={style.info} >
               Menu
             </a>
           </li>

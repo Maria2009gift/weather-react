@@ -1,3 +1,12 @@
+
+.container_news {
+    display: none;
+}
+
+@media screen and (min-width: 768px){
+    
+
+
 .container_news {
     margin-bottom: 80px;
 }
@@ -17,7 +26,6 @@
 
 .list > li {
     width: 270px;
-    
 }
 
 .img_news {
@@ -37,11 +45,4 @@
     background-color: #FFB36C;
 }
 
-
-
-
-
-
-
-
-
+}

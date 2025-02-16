@@ -1,14 +1,22 @@
 
+
+
+
 .header {
     display: flex;
-    height: 80px;
+    height: 50px;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
-    margin-right: 111px;
-    width: 82px;
-    height: 56px;
+    margin-right: 50px;
+    width: 34px;
+    height: 22px;
+}
+
+.item_info {
+    display: none;
 }
 
 .list_info {
@@ -24,11 +32,7 @@
 }
 
 .container_user {
-    display: flex;
-    align-items: center;
-    gap: 27px;
-
-    margin-left: auto;
+    /* display: none; */
 }
 
 .button_signup {
@@ -42,6 +46,53 @@
 
 
 
+@media screen and (min-width: 768px){
+    .header {
+        height: 70px;
+        justify-content: none;
 
+    }
+    .menu {
+        display: none;
+    }
+
+    .item_info {
+        display: block;
+    }
+
+    .list_info {
+        display: flex;
+        gap: 45px;
+        list-style: none;
+        padding: 0;
+    }
+
+    .container_user {
+        display: flex;
+        align-items: center;
+        gap: 27px;
+    
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width: 1280px){
+    .header {
+        height: 80px;
+    }
+
+    .logo {
+        margin-right: 111px;
+        width: 82px;
+        height: 56px;
+    }
+
+    .list_info {
+        display: flex;
+        gap: 45px;
+        list-style: none;
+        padding: 0;
+    }
+} 
 
 

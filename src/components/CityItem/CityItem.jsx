@@ -33,7 +33,7 @@ function CityItem({ data, arrayOfLocations, toUpdateLocations, isfav, updateFav,
   
       localStorage.setItem("favorites", JSON.stringify(favoriteLocation));
     } else {
-      alert("registr, pls")
+      alert("register, pls")
     }
   }
 

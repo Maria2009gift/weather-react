@@ -17,7 +17,6 @@ function App() {
   const [searchedLocationData, setSearchedLocationData] = useState({});
   const [modalVisability, setModalVisability] = useState(false);
   const [userName, setUserName] = useState(null);
-  console.log(userName);
   
 
   return (
@@ -37,7 +36,7 @@ function App() {
       {userName && <ForecastSchedule search={searchedLocation} />}
       <News />
       <GallerySlider />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
