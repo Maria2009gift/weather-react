@@ -40,7 +40,7 @@ function Header({ openModal, nameUser }) {
             Sign Up
           </button>
           
-          {nameUser ? <img src={user_img} alt="" className="user_avatar"/> : <p className="user_avatar">{nameUser}</p>}
+          {nameUser ? <p className="user_avatar">{nameUser}</p> : <img src={user_img} alt="" className="user_avatar"/>}
           
         </div>
       </header>

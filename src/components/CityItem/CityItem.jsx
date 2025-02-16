@@ -4,12 +4,8 @@ import refresh from "../../img/refresh.png";
 import heart from "../../img/heart.png";
 import deletebin from "../../img/delete.png";
 
-// import { useState } from "react";
 
-function CityItem({ data, arrayOfLocations, toUpdateLocations, isfav, updateFav }) {
-  // console.log(JSON.parse(data));
-
-  // const [favoriteLocations, setFavoriteLOcations] = useState([])
+function CityItem({ data, arrayOfLocations, toUpdateLocations, isfav, updateFav, userName }) {
 
   function toRefresh(event) {
     const locationName = event.currentTarget.id;
@@ -29,13 +25,16 @@ function CityItem({ data, arrayOfLocations, toUpdateLocations, isfav, updateFav 
   }
 
   function addFavorite(event) {
-    const locationName = event.currentTarget.id;
-    const favoriteLocation = arrayOfLocations.find(
-      (location) => location.location.name === locationName
-    );
-    console.log(favoriteLocation);
-
-    localStorage.setItem("favorites", JSON.stringify(favoriteLocation));
+    if (userName) {
+      const locationName = event.currentTarget.id;
+      const favoriteLocation = arrayOfLocations.find(
+        (location) => location.location.name === locationName
+      );
+  
+      localStorage.setItem("favorites", JSON.stringify(favoriteLocation));
+    } else {
+      alert("registr, pls")
+    }
   }
 
   function deleteCard(event) {

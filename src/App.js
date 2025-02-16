@@ -16,7 +16,9 @@ function App() {
   const [searchedLocation, setSearchedLocation] = useState("");
   const [searchedLocationData, setSearchedLocationData] = useState({});
   const [modalVisability, setModalVisability] = useState(false);
-  const [userName, setUserName] = useState("Avatar");
+  const [userName, setUserName] = useState(null);
+  console.log(userName);
+  
 
   return (
     <>
@@ -28,10 +30,11 @@ function App() {
       <CityList
         search={searchedLocation}
         getLoactionData={setSearchedLocationData}
+        nameUser={userName}
       />
-      {searchedLocation && <DetailedInfo locate={searchedLocationData} />}
-      <ForecastChart search={searchedLocation} />
-      <ForecastSchedule search={searchedLocation} />
+      {searchedLocation && userName ? <DetailedInfo locate={searchedLocationData} /> : <p>If you want more info, register pls</p> }
+      {userName && <ForecastChart search={searchedLocation}/>}
+      {userName && <ForecastSchedule search={searchedLocation} />}
       <News />
       <GallerySlider />
       <Footer />

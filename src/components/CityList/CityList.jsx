@@ -4,13 +4,12 @@ import Container from "../Elements/Container/Container";
 
 import { useState, useEffect } from "react";
 
-function CityList({ search, getLoactionData }) {
+function CityList({ search, getLoactionData, nameUser }) {
   const [favorite, setFavorite] = useState(
     JSON.parse(localStorage.getItem("favorites"))
   );
   const [locations, setLocations] = useState([]);
   useEffect(() => {
-    console.log(favorite);
     
     if (search) {
       fetch(
@@ -67,6 +66,7 @@ function CityList({ search, getLoactionData }) {
               arrayOfLocations={locations}
               toUpdateLocations={setLocations}
               fav="notFav"
+              userName={nameUser}
             />
           ))}
         {favorite && (
