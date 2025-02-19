@@ -1,16 +1,10 @@
 import style from './GallerySlider.module.css'
-
+import f from '../../img/facebook.png'
 import Container from "../Elements/Container/Container";
 
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { useState, useEffect } from "react";
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import "swiper/element/css/effect-coverflow";
 
 function GallerySlider() {
   const [images, setImage] = useState({});
@@ -27,26 +21,24 @@ function GallerySlider() {
 
   return (
     <Container>
-      <div className={style.container_gallery}>
+      {/* <div className={style.container_gallery}>
         <h2 className="title_halleryslider">Beautiful nature</h2>
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={50}
-          slidesPerView={3}
-          navigation
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
-        >
+        <Splide options={ {
+        rewind: true,
+        gap   : '1rem',
+      } }
+      aria-label="My Favorite Images">
           {images.images &&
             images.images.map((img) => (
-              <SwiperSlide>
-                <img src={img.previewURL} alt="" width="200px" />
-              </SwiperSlide>
+              <SplideSlide>
+                <img src={f} alt="" />
+              </SplideSlide>
             ))}
-        </Swiper>
-      </div>
+        </Splide >
+      </div> */}
     </Container>
   );
 }
 
 export default GallerySlider;
+{/* <img src={img.previewURL} alt="nature" width="200px" /> */}

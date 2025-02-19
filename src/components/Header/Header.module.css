@@ -11,8 +11,8 @@
 
 .logo {
     margin-right: 50px;
-    width: 34px;
-    height: 22px;
+    width: 47px;
+    height: 33px;
 }
 
 .item_info {
@@ -31,8 +31,16 @@
     color: black;
 }
 
+.menu {
+    font-size: 14px;
+    background-color: #FFB36C;
+    padding: 5px 18px;
+    border: none;
+    border-radius: 10px;
+}
+
 .container_user {
-    /* display: none; */
+    display: none;
 }
 
 .button_signup {

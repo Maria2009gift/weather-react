@@ -1,6 +1,20 @@
 .chart {
     background-color: #D9D9D9;
-    border-radius: 20px;
-    padding: 26px 40px 40px;
-    margin-bottom: 80px;
+    border-radius: 15px;
+    padding: 18px 25px 25px;
+    margin-bottom: 35px;
+}
+
+@media screen and (min-width: 768px){
+    .container {
+        margin: 0 100px;
+    }
+}
+
+@media screen and (min-width: 1280px){
+    .chart {
+        border-radius: 20px;
+        padding: 26px 40px 40px;
+        margin-bottom: 80px;
+    }
 }

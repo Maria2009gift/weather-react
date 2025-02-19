@@ -12,7 +12,6 @@ function ForecastSchedule({ search }) {
       )
         .then((res) => res.json())
         .then((locate) => {
-          // console.log(locate.forecast.forecastday);
           setLocations(locate);
           setA(true);
         });
@@ -29,7 +28,10 @@ function ForecastSchedule({ search }) {
               locations.forecast.forecastday.map((location) => (
                 <div className={style.day}>
                   <p className={style.date}>Fri, Oct 13</p>
-                  <p className={style.temp}>{`${location.day.maxtemp_c}/${location.day.mintemp_c}℃`}</p>
+                  <div className={style.container_wether}>
+                    <img src={location.day.condition.icon} alt="" className={style.wether_img}/>
+                    <p className={style.temp}>{`${location.day.maxtemp_c}/${location.day.mintemp_c}℃`}</p>
+                  </div>
                   <p className={style.condition}>{location.day.condition.text}</p>
                 </div>
               ))}

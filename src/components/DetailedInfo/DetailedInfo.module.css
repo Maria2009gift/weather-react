@@ -1,6 +1,10 @@
 
 .list_detailedinfo {
-    
+    list-style: none;
+    background-color: #E8E8E8;
+    border-radius: 10px;
+    padding: 35px 0;
+    margin-bottom: 35px;
 }
 
 @media screen and (min-width: 1280px){
@@ -11,9 +15,8 @@
         grid-column-gap: 0px;
         grid-row-gap: 0px;
         
-        list-style: none;
-        background-color: #E8E8E8;
-        border-radius: 10px;
+        
+
         padding: 40px 0 9px;
         margin-bottom: 80px;
 

@@ -14,10 +14,28 @@
     transform: translate(-50%, -50%);
     min-height: 300px;
     max-width: 600px;
-    width: 600px;
-    height: 534px;
-    padding: 28px 80px;
+    width: 200px;
+    height: 484px;
+    padding: 10px 40px;
     background-color: #fff;
     border-radius: 25px;
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px
+}
+
+@media screen and (min-width: 768px){
+    /* .container {
+        margin: 0 100px;
+    } */
+}
+
+@media screen and (min-width: 1280px){
+    .modal{
+
+        min-height: 300px;
+        max-width: 600px;
+        width: 600px;
+        height: 534px;
+        padding: 28px 80px;
+
+    }
 }

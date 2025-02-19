@@ -5,9 +5,14 @@ import user_img from '../../img/user.png'
 
 import Container from "../Elements/Container/Container";
 
-function Header({ openModal, nameUser }) {
+function Header({ openModal, menu, nameUser }) {
   function startRegistration() {
     openModal(true);
+  }
+
+  function openMenu() {
+    // document.preventDefalt()
+    menu(true)
   }
 
   return (
@@ -26,9 +31,9 @@ function Header({ openModal, nameUser }) {
             </a>
           </li>
           <li className={style.menu}>
-            <a href="g" className={style.info} >
+            <button type="button" className={style.menu} onClick={openMenu}>
               Menu
-            </a>
+            </button>
           </li>
         </ul>
         <div className={style.container_user}>
