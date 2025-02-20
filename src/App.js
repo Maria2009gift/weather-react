@@ -15,10 +15,11 @@ import { useState } from "react";
 
 function App() {
   const [searchedLocation, setSearchedLocation] = useState("");
-  const [searchedLocationData, setSearchedLocationData] = useState({});
   const [modalVisability, setModalVisability] = useState(false);
   const [menuVisibility, setMenuVisibilty] = useState(false)
   const [userName, setUserName] = useState(null);
+  const [locationForecst, setLocationForecast] = useState("")
+
   
 
   return (
@@ -31,12 +32,12 @@ function App() {
       <Hero getSearch={setSearchedLocation} />
       <CityList
         search={searchedLocation}
-        getLoactionData={setSearchedLocationData}
         nameUser={userName}
+        updateForecast={setLocationForecast}
       />
-      {searchedLocation && userName ? <DetailedInfo locate={searchedLocationData} /> : <p className="registration_alert">If you want more info, register pls</p> }
-      {userName && <ForecastChart search={searchedLocation}/>}
-      {userName && <ForecastSchedule search={searchedLocation} />}
+      {searchedLocation && userName ? <DetailedInfo search={searchedLocation} update={locationForecst}/> : <p className="registration_alert">Search location, if you want more info, register please</p> }
+      {userName && <ForecastChart search={searchedLocation} updated={locationForecst}/>}
+      {userName && <ForecastSchedule search={searchedLocation} updated={locationForecst}/>}
       <News />
       <GallerySlider />
       <Footer />

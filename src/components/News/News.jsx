@@ -25,7 +25,7 @@ function News() {
   return (
     <Container>
       <div className={style.container_news}>
-        <h2 className={style.title_news}>Interacting with our pets</h2>
+        <h2 className={style.title_news}>News in world</h2>
         <ul className={style.list}>
           {news.articles &&
             news.articles.map((newsObj) => (

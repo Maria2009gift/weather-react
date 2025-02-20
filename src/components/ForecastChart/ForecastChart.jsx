@@ -26,7 +26,7 @@ ChartJS.register(
   Legend
 );
 
-function Forecast({ search }) {
+function Forecast({ search, updated }) {
   const [locations, setLocations] = useState([]);
 
   useEffect(() => {
@@ -46,6 +46,24 @@ function Forecast({ search }) {
         });
     }
   }, [search]);
+
+  useEffect(() => {
+    if (updated) {
+      fetch(
+        `http://api.weatherapi.com/v1/forecast.json?q=${updated}&key=b5c7c9b360384cbb886211934251801`
+      )
+        .then((res) => res.json())
+        .then((locate) => {
+          const forecast = [locate.forecast.forecastday[0].hour];
+          const hours = [];
+          forecast[0].map((hour) => {
+            hours.push(hour.heatindex_c);
+            setLocations(hours);
+            return hours;
+          });
+        });
+    }
+  }, [updated]);
 
   const options = {
     scales: {

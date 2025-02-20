@@ -4,7 +4,7 @@ import Container from "../Elements/Container/Container";
 
 import { useState, useEffect } from "react";
 
-function CityList({ search, getLoactionData, nameUser }) {
+function CityList({ search, nameUser, updateForecast }) {
   const [favorite, setFavorite] = useState(
     JSON.parse(localStorage.getItem("favorites"))
   );
@@ -26,7 +26,6 @@ function CityList({ search, getLoactionData, nameUser }) {
             } else {
               const arrayNewLocations = [locate];
               setLocations(arrayNewLocations);
-              getLoactionData(locate);
             }
           }
 
@@ -38,7 +37,6 @@ function CityList({ search, getLoactionData, nameUser }) {
             } else {
               const arrayNewLocations = [locate];
               setLocations(arrayNewLocations);
-              getLoactionData(locate);
             }
           } 
 
@@ -49,7 +47,6 @@ function CityList({ search, getLoactionData, nameUser }) {
             } else {
               const arrayNewLocations = [locate];
               setLocations(arrayNewLocations);
-              getLoactionData(locate);
             }
           }
         });
@@ -67,6 +64,7 @@ function CityList({ search, getLoactionData, nameUser }) {
               toUpdateLocations={setLocations}
               fav="notFav"
               userName={nameUser}
+              updateF={updateForecast}
             />
           ))}
         {favorite && (
@@ -76,6 +74,7 @@ function CityList({ search, getLoactionData, nameUser }) {
             toUpdateLocations={setLocations}
             isfav="fav"
             updateFav={setFavorite}
+            updateF={updateForecast}
           />
         )}
       </ul>

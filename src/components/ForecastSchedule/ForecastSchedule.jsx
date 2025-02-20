@@ -2,7 +2,8 @@ import Container from "../Elements/Container/Container";
 import style from "./ForecastSchedule.module.css";
 import { useState, useEffect } from "react";
 
-function ForecastSchedule({ search }) {
+function ForecastSchedule({ search, updated }) {
+  
   const [locations, setLocations] = useState([]);
   const [a, setA] = useState(false);
   useEffect(() => {
@@ -17,6 +18,20 @@ function ForecastSchedule({ search }) {
         });
     }
   }, [search]);
+  useEffect(() => {
+  console.log(updated);
+
+    if (updated) {
+      fetch(
+        `http://api.weatherapi.com/v1/forecast.json?days=7&q=${updated}&key=b5c7c9b360384cbb886211934251801`
+      )
+        .then((res) => res.json())
+        .then((locate) => {
+          setLocations(locate);
+          setA(true);
+        });
+    }
+  }, [updated]);
 
   return (
     <Container>

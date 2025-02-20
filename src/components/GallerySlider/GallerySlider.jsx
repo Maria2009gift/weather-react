@@ -1,5 +1,6 @@
 import style from './GallerySlider.module.css'
-import f from '../../img/facebook.png'
+import '@splidejs/react-splide/css';
+import '@splidejs/react-splide/css/core';
 import Container from "../Elements/Container/Container";
 
 import { useState, useEffect } from "react";
@@ -11,7 +12,7 @@ function GallerySlider() {
 
   useEffect(() => {
     fetch(
-      `https://pixabay.com/api/?category=nature&q=forest&page=1&per_page=5&key=44002611-c1194520823d769ac47082ab5`
+      `https://pixabay.com/api/?category=nature&q=forest+mountains&orientation=horizontal&page=10&per_page=14&key=44002611-c1194520823d769ac47082ab5`
     )
       .then((res) => res.json())
       .then((aOfImg) => {
@@ -21,24 +22,32 @@ function GallerySlider() {
 
   return (
     <Container>
-      {/* <div className={style.container_gallery}>
+      <div className={style.container_gallery}>
         <h2 className="title_halleryslider">Beautiful nature</h2>
         <Splide options={ {
-        rewind: true,
-        gap   : '1rem',
-      } }
+          type    : 'loop',
+          perPage : 5,
+          autoplay: true,
+        }}
       aria-label="My Favorite Images">
           {images.images &&
             images.images.map((img) => (
               <SplideSlide>
-                <img src={f} alt="" />
+                <img src={img.previewURL} alt="nature" width="200" />
               </SplideSlide>
             ))}
         </Splide >
-      </div> */}
+      </div>
     </Container>
   );
 }
 
 export default GallerySlider;
-{/* <img src={img.previewURL} alt="nature" width="200px" /> */}
+
+
+    //   <SplideSlide>
+    //   <img src={f} alt="Image 1"/>
+    // </SplideSlide>
+    // <SplideSlide>
+    //   <img src={f} alt="Image 2"/>
+    // </SplideSlide>

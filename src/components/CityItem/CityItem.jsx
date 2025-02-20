@@ -5,7 +5,7 @@ import heart from "../../img/heart.png";
 import deletebin from "../../img/delete.png";
 
 
-function CityItem({ data, arrayOfLocations, toUpdateLocations, isfav, updateFav, userName }) {
+function CityItem({ data, arrayOfLocations, toUpdateLocations, isfav, updateFav, userName, updateF }) {
 
   function toRefresh(event) {
     const locationName = event.currentTarget.id;
@@ -22,6 +22,10 @@ function CityItem({ data, arrayOfLocations, toUpdateLocations, isfav, updateFav,
         arrayOfLocations[indexOfLocation] = locate;
         toUpdateLocations(arrayOfLocations);
       });
+  }
+
+  function updateForecast(event) {
+    updateF(event.currentTarget.id)
   }
 
   function addFavorite(event) {
@@ -87,8 +91,8 @@ function CityItem({ data, arrayOfLocations, toUpdateLocations, isfav, updateFav,
       </div>
       <p className={style.time}>{data.location.localtime.slice(10, 16)}</p>
       <div className={style.container_forecasts}>
-        <button className={style.forecast}>Hourly forecast</button>
-        <button className={style.forecast}>3-day forecast</button>
+        <button className={style.forecast} id={data.location.name} onClick={updateForecast}>Hourly forecast</button>
+        <button className={style.forecast} id={data.location.name} onClick={updateForecast}>3-day forecast</button>
       </div>
       <div className={style.container_day}>
         <p className={style.data}>{fullDay()}</p>
@@ -121,7 +125,7 @@ function CityItem({ data, arrayOfLocations, toUpdateLocations, isfav, updateFav,
           </button>
         </li>
         <li className={style.item}>
-          <button className={style.seemore}>See more</button>
+          <button className={style.seemore} id={data.location.name} onClick={updateForecast}>See more</button>
         </li>
         <li className={style.item}>
           <button
