@@ -18,38 +18,46 @@ function CityList({ search, nameUser, updateForecast }) {
         .then((res) => res.json())
         .then((locate) => {
 
-          if (locations.length === 3 && favorite === null) {
-            locations.shift()
-            if (locations.length) {
-              const arrayNewLocations = [...locations, locate];
-              setLocations(arrayNewLocations);
-            } else {
-              const arrayNewLocations = [locate];
-              setLocations(arrayNewLocations);
+          if (locate.current) {
+            
+            if (locations.length === 3 && favorite === null) {
+              locations.shift()
+              if (locations.length) {
+                const arrayNewLocations = [...locations, locate];
+                setLocations(arrayNewLocations);
+              } else {
+                const arrayNewLocations = [locate];
+                setLocations(arrayNewLocations);
+              }
             }
+  
+            if (locations.length === 2 && favorite !== null) {
+              locations.shift()
+              if (locations.length) {
+                const arrayNewLocations = [...locations, locate];
+                setLocations(arrayNewLocations);
+              } else {
+                const arrayNewLocations = [locate];
+                setLocations(arrayNewLocations);
+              }
+            } 
+  
+            else {
+              if (locations.length) {
+                const arrayNewLocations = [...locations, locate];
+                setLocations(arrayNewLocations);
+              } else {
+                const arrayNewLocations = [locate];
+                setLocations(arrayNewLocations);
+              }
+            }
+          } else {
+            alert("skrgjh")
           }
 
-          if (locations.length === 2 && favorite !== null) {
-            locations.shift()
-            if (locations.length) {
-              const arrayNewLocations = [...locations, locate];
-              setLocations(arrayNewLocations);
-            } else {
-              const arrayNewLocations = [locate];
-              setLocations(arrayNewLocations);
-            }
-          } 
+        })
 
-          else {
-            if (locations.length) {
-              const arrayNewLocations = [...locations, locate];
-              setLocations(arrayNewLocations);
-            } else {
-              const arrayNewLocations = [locate];
-              setLocations(arrayNewLocations);
-            }
-          }
-        });
+        
     }
   }, [search]);
 

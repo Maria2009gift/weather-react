@@ -2,6 +2,7 @@ import style from "./CityItem.module.css";
 
 import refresh from "../../img/refresh.png";
 import heart from "../../img/heart.png";
+import heart_fav from "../../img/heart_fav.png"
 import deletebin from "../../img/delete.png";
 
 
@@ -121,7 +122,8 @@ function CityItem({ data, arrayOfLocations, toUpdateLocations, isfav, updateFav,
             onClick={addFavorite}
             id={data.location.name}
           >
-            <img src={heart} alt="" />
+            {isfav === "fav" ? <img src={heart_fav} alt="" /> : <img src={heart} alt="" />}
+            
           </button>
         </li>
         <li className={style.item}>

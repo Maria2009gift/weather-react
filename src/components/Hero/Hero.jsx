@@ -5,11 +5,43 @@ import search_img from '../../img/search.png'
 import { useState } from "react";
 
 function Hero({ getSearch }) {
+
+  let now = new Date();
+
   const handleSubmit = (event) => {
     const searchResult = event.currentTarget.elements.location.value;
 
     event.preventDefault();
     getSearch(searchResult);
+    event.currentTarget.elements.location.value = ""
+  };
+
+  const fullDay = () => {
+    let now = new Date();
+    return `${now.getDate()}.${now.getMonth() + 1}.${now.getFullYear()}`;
+  };
+
+  const day = () => {
+    let now = new Date();
+    let day = now.getDay();
+    switch (day) {
+      case 0:
+        return "Sunday";
+      case 1:
+        return "Monday";
+      case 2:
+        return "Tuesday";
+      case 3:
+        return "Wensday";
+      case 4:
+        return "Thursday";
+      case 5:
+        return "Friday";
+      case 6:
+        return "Saturday";
+      default:
+        break;
+    }
   };
 
   return (
@@ -21,7 +53,7 @@ function Hero({ getSearch }) {
           the weather.
         </p>
         <hr className={style.line} />
-        <p className={style.date}>October 2023 Friday, 13th</p>
+        <p className={style.date}>February {now.getFullYear()} {day()}, 13th</p>
       </div>
       <form onSubmit={handleSubmit} className={style.form}>
         <label>
