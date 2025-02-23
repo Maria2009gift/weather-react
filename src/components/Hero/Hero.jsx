@@ -16,11 +16,6 @@ function Hero({ getSearch }) {
     event.currentTarget.elements.location.value = ""
   };
 
-  const fullDay = () => {
-    let now = new Date();
-    return `${now.getDate()}.${now.getMonth() + 1}.${now.getFullYear()}`;
-  };
-
   const day = () => {
     let now = new Date();
     let day = now.getDay();
