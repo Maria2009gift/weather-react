@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/weather-react/static/css/main.5a6ffe72.css",
-    "main.js": "/weather-react/static/js/main.2f41cd90.js",
+    "main.css": "/weather-react/static/css/main.a592ccdf.css",
+    "main.js": "/weather-react/static/js/main.2726d9fe.js",
     "static/media/bg-hero-desktop.jpg": "/weather-react/static/media/bg-hero-desktop.95311d36a0fd1a2e2d11.jpg",
+    "static/media/bg-hero-tablet.jpg": "/weather-react/static/media/bg-hero-tablet.84c39626fef2e304aea3.jpg",
+    "static/media/bg-hero-mobile.jpg": "/weather-react/static/media/bg-hero-mobile.8c88081803af4e469e59.jpg",
     "index.html": "/weather-react/index.html",
-    "main.5a6ffe72.css.map": "/weather-react/static/css/main.5a6ffe72.css.map",
-    "main.2f41cd90.js.map": "/weather-react/static/js/main.2f41cd90.js.map"
+    "main.a592ccdf.css.map": "/weather-react/static/css/main.a592ccdf.css.map",
+    "main.2726d9fe.js.map": "/weather-react/static/js/main.2726d9fe.js.map"
   },
   "entrypoints": [
-    "static/css/main.5a6ffe72.css",
-    "static/js/main.2f41cd90.js"
+    "static/css/main.a592ccdf.css",
+    "static/js/main.2726d9fe.js"
   ]
 }
