@@ -2,7 +2,7 @@ import style from "./Hero.module.css";
 
 import search_img from '../../img/search.png'
 
-import { useState } from "react";
+
 
 function Hero({ getSearch }) {
 
@@ -48,7 +48,7 @@ function Hero({ getSearch }) {
           the weather.
         </p>
         <hr className={style.line} />
-        <p className={style.date}>February {now.getFullYear()} {day()}, 13th</p>
+        <p className={style.date}>February {now.getFullYear()} {day()}, 25</p>
       </div>
       <form onSubmit={handleSubmit} className={style.form}>
         <label>

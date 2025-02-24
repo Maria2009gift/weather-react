@@ -52,7 +52,7 @@ function CityList({ search, nameUser, updateForecast }) {
               }
             }
           } else {
-            alert("skrgjh")
+            alert("Неправильний запит")
           }
 
         })
@@ -91,4 +91,3 @@ function CityList({ search, nameUser, updateForecast }) {
 }
 
 export default CityList;
-// b5c7c9b360384cbb886211934251801
