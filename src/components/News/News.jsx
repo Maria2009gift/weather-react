@@ -28,7 +28,7 @@ function News() {
         <h2 className={style.title_news}>News in world</h2>
         <ul className={style.list}>
           {news.articles &&
-            news.articles.map((newsObj) => (
+            news.articles.map((newsObj) => ( 
               <li>
                 <img className={style.img_news} src={newsObj.urlToImage} alt="" />
                 <p className={style.article_title}>{newsObj.title}</p>
