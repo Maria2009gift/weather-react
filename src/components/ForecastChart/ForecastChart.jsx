@@ -32,7 +32,7 @@ function Forecast({ search, updated }) {
   useEffect(() => {
     if (search) {
       fetch(
-        `http://api.weatherapi.com/v1/forecast.json?q=${search}&key=b5c7c9b360384cbb886211934251801`
+        `https://api.weatherapi.com/v1/forecast.json?q=${search}&key=b5c7c9b360384cbb886211934251801`
       )
         .then((res) => res.json())
         .then((locate) => {

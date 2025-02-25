@@ -9,7 +9,7 @@ function ForecastSchedule({ search, updated }) {
   useEffect(() => {
     if (search) {
       fetch(
-        `http://api.weatherapi.com/v1/forecast.json?days=7&q=${search}&key=b5c7c9b360384cbb886211934251801`
+        `https://api.weatherapi.com/v1/forecast.json?days=7&q=${search}&key=b5c7c9b360384cbb886211934251801`
       )
         .then((res) => res.json())
         .then((locate) => {
@@ -25,7 +25,7 @@ function ForecastSchedule({ search, updated }) {
 
     if (updated) {
       fetch(
-        `http://api.weatherapi.com/v1/forecast.json?days=7&q=${updated}&key=b5c7c9b360384cbb886211934251801`
+        `https://api.weatherapi.com/v1/forecast.json?days=7&q=${updated}&key=b5c7c9b360384cbb886211934251801`
       )
         .then((res) => res.json())
         .then((locate) => {

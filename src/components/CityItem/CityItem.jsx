@@ -12,7 +12,7 @@ function CityItem({ data, arrayOfLocations, toUpdateLocations, isfav, updateFav,
     const locationName = event.currentTarget.id;
 
     fetch(
-      `http://api.weatherapi.com/v1/current.json?q=${locationName}&key=b5c7c9b360384cbb886211934251801`
+      `https://api.weatherapi.com/v1/current.json?q=${locationName}&key=b5c7c9b360384cbb886211934251801`
     )
       .then((res) => res.json())
       .then((locate) => {

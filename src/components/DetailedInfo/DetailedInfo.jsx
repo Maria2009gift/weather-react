@@ -24,7 +24,7 @@ function DetailedInfo({ search, update }) {
   useEffect(() => {
     if (search) {
       fetch(
-        `http://api.weatherapi.com/v1/current.json?q=${search}&key=b5c7c9b360384cbb886211934251801`
+        `https://api.weatherapi.com/v1/current.json?q=${search}&key=b5c7c9b360384cbb886211934251801`
       )
         .then((res) => res.json())
         .then((location) => {
@@ -37,7 +37,7 @@ function DetailedInfo({ search, update }) {
   useEffect(() => {
     if (update) {
       fetch(
-        `http://api.weatherapi.com/v1/current.json?q=${update}&key=b5c7c9b360384cbb886211934251801`
+        `https://api.weatherapi.com/v1/current.json?q=${update}&key=b5c7c9b360384cbb886211934251801`
       )
         .then((res) => res.json())
         .then((location) => {
