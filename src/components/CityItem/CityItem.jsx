@@ -2,7 +2,7 @@ import style from "./CityItem.module.css";
 
 import refresh from "../../img/refresh.png";
 import heart from "../../img/heart.png";
-import heart_fav from "../../img/heart_fav.png"
+import heart_fav from "../../img/heart_fav.jpg"
 import deletebin from "../../img/delete.png";
 
 
